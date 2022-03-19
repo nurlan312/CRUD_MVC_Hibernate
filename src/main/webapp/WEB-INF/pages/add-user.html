@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Add user</title>
+</head>
+<body>
+<h1 style="text-align: center; background-color: orange" >Add new user</h1>
+<table>
+    <form action="#" th:action="@{/users/save-user}" method="post" th:object="${user}">
+<tr>
+    <th>
+        <label for="Name">Name</label>
+        <input type="text" th:field="*{name}" id="Name" placeholder="Enter your name">
+    </th>
+    <th>
+        <label for="Age">Age</label>
+        <input type="text" th:field="*{age}" id="Age" placeholder="Enter your age">
+    </th>
+    <th>
+        <label for="Car mark">Car mark</label>
+        <input type="text" th:field="*{car.mark}" id="Car mark" placeholder="Enter your car">
+    </th>
+    <th>
+        <label for="Car price">Car price</label>
+        <input type="text" th:field="*{car.price}" id="Car price" placeholder="Enter your price">
+    </th>
+        <input type="submit" value="Save user">
+</tr>
+    </form>
+</table>
+<hr>
+<img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZ3JhbW1lcnxlbnwwfHwwfHw%3D&w=1000&q=80" alt="Surot kana?" width="400" height="250">
+</body>
+</html>

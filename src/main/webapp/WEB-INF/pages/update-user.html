@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update user</title>
+</head>
+<body>
+<h1 style="background-color: gold; text-align: center">Update user</h1>
+<hr>
+<table>
+    <form action="#" th:action="@{/users/edit-user/{id}(id=${user.id})}"
+          th:object="${user}" th:method="post">
+        <tr>
+            <th>
+                <label for="Name">Name</label>
+                <input type="text" th:field="*{name}" id="Name">
+            </th>
+            <th>
+                <label for="Age">Age</label>
+                <input type="text" th:field="*{age}" id="Age">
+            </th>
+            <th>
+                <label for="Car_mark">Car mark</label>
+                <input type="text" th:field="*{car.mark}" id="Car_mark">
+            </th>
+            <th>
+                <label for="Car price">Car price</label>
+                <input type="text" th:field="*{car.price}" id="Car price">
+            </th>
+        </tr>
+        <input type="submit" value="Update user">
+    </form>
+<!--    <form action="#" th:method="DELETE" th:action="@{/users/delete-user/{id}(id=${user.id})}" >-->
+<!--        <input type="submit" value="Delete">-->
+<!--    </form>-->
+</table>
+<br>
+<hr>
+<img src="https://www.careergirls.org/wp-content/uploads/2015/06/Computer_Programmer1920X10180.jpg" alt="Surot kana?" width="400" height="250">
+</body>
+</html>
